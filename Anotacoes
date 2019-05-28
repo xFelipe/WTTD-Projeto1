@@ -26,3 +26,12 @@ pip install python-decouple
 pip install dj-database-url
 pip install dj-static
 pip freeze > requirements.txt
+
+
+
+heroku:
+heroku apps:create eventex-felipegomes
+heroku open
+heroku config:set SECRET_KEY='i$^u%mm4@ud)brocw&-!01qrcb9rb(tyw+b7b2yjy(b@ah6f^5'
+heroku config:set DEBUG=True
+git push heroku master --force
