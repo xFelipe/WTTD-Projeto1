@@ -1,0 +1,28 @@
+python -m venv .wttd
+source .wttd/bin/activate
+pip install django
+
+django-admin startproject eventex .
+alias manage='python $VIRTUAL_ENV/../manage.py'
+manage startapp core
+
+
+
+regex:
+href="(.*)"  # .* = *
+(src|href)  # src ou href
+. = qualquer caracter
+* = 0 ou mais, o máximo de vezes
+? = o mínimo de vezes
+.*?
+Condição: (src|href)="((img|css|js).*?)"
+
+Mudança: $1="{% static '$2'%}" ######## $1 = primeiro elemento, $2 = segundo elemento...
+
+
+
+pip:
+pip install python-decouple
+pip install dj-database-url
+pip install dj-static
+pip freeze > requirements.txt
