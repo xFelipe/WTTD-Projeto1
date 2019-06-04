@@ -26,6 +26,8 @@ pip install python-decouple
 pip install dj-database-url
 pip install dj-static
 pip freeze > requirements.txt
+git remote add origin https://github.com/xFelipe/WTTD-Projeto1.git
+git push -u origin master
 
 
 
