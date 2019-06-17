@@ -2,6 +2,9 @@
 
 Sistema de eventos encomendado pela Morena
 
+[![Build Status](https://travis-ci.org/xFelipe/WTTD-Projeto1.svg?branch=master)](https://travis-ci.org/xFelipe/WTTD-Projeto1)
+
+
 ## Como desenvolver?
 
 1. Clone o repositório.
