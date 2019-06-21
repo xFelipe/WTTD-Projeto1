@@ -18,7 +18,7 @@ Sistema de eventos encomendado pela Morena
 git clone https://github.com/xFelipe/xFelipe.github.io.git wttd
 python -m venv .wttd
 source .wttd/bin/activate
-pip install -r requirements.txt
+pip install -r requirements-dev.txt
 cp contrib/env-sample .env
 python manage.py test
 ```
