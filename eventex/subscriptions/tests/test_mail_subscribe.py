@@ -12,8 +12,9 @@ class SubscribePostValid(TestCase):
         self.email = mail.outbox[0]
 
     def test_post(self):
-        """Valid post should redirect to /inscricao/"""
+        """Valid post should redirect to /inscricao/1/"""
         self.assertEqual(302, self.response.status_code)  # redirect
+        self.assertRedirects(self.response, '/inscricao/1/')
 
     def test_send_subscribe_email(self):
         self.assertEqual(1, len(mail.outbox))

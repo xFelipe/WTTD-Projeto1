@@ -1,5 +1,3 @@
-import datetime
-
 from django.test import TestCase
 from eventex.subscriptions.forms import SubscriptionForm
 from eventex.subscriptions.models import Subscription
@@ -67,11 +65,3 @@ class SubscribePostInvalid(TestCase):
 
     def test_dont_save_subscription(self):
         self.assertFalse(Subscription.objects.exists())
-
-
-class SubscribeSucessMessage(TestCase):
-    def test_message(self):
-        data = dict(name='Felipe Gomes', cpf='12345678901',
-                    email='felipe@gomes.foi', phone='22-3958-2932')
-        response = self.client.post('/inscricao/', data, follow=True)
-        self.assertContains(response, 'Inscrição realizada com sucesso!')
