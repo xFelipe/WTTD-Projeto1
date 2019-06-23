@@ -1,6 +1,8 @@
 from django.core import mail
 from django.test import TestCase
 
+from eventex.subscriptions.models import Subscription
+
 
 class SubscribePostValid(TestCase):
     def setUp(self):
@@ -44,3 +46,6 @@ class SubscribePostValid(TestCase):
         # self.assertIn('12345678901', self.email.body)
         # self.assertIn('felipegd@gmail.com', self.email.body)
         # self.assertIn('21-99618-6180', self.email.body)
+
+    def test_save_subscription(self):
+        self.assertTrue(Subscription.objects.exists())
