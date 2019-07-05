@@ -1,4 +1,4 @@
-# Evemtex
+# Eventex
 
 Sistema de eventos encomendado pela Morena
 
