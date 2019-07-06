@@ -365,6 +365,16 @@ section header h2 {
     border-color: #D0E9C6;
 }
 
+/* Minha Customização */
 
+
+.speakers img {
+    width: 200px;
+    border-radius: 100%;
+}
+
+.speakers h2 {
+    text-transform: uppercase;
+}
 
 /* Fim Customização */
