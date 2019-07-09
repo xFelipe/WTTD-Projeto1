@@ -15,9 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-#from eventex.subscriptions import urls as subscriptions_urls
-
 from eventex.core.views import home, speaker_detail
+
 
 urlpatterns = [
     path('', home, name='home'),
