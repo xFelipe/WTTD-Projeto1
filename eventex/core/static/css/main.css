@@ -377,4 +377,10 @@ section header h2 {
     text-transform: uppercase;
 }
 
+.speakers img.photo {
+    float: left;
+    padding-right: 15px;
+}
+
+
 /* Fim Customização */

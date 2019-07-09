@@ -1,10 +1,18 @@
 from django.test import TestCase
 from django.shortcuts import render, resolve_url as r
+from eventex.core.models import Speaker
 
 
-class SpeakerDetailTest(TestCase):
+class SpeakerDetailGet(TestCase):
     def setUp(self):
-        self.response = self.client.get('/palestrantes/grace-hopper/')
+        Speaker.objects.create(
+            name='Grace Hopper',
+            slug='grace-hopper',
+            photo='http://hbn.link/hopper-pic',
+            website='http://hbn.link/hopper-site',
+            description='Programadora e almirante.',
+        )
+        self.response = self.client.get(r('speaker_detail', slug='grace-hopper'))
 
     def test_get(self):
         """GET Should return status 200"""
@@ -23,3 +31,14 @@ class SpeakerDetailTest(TestCase):
         for expected in contents:
             with self.subTest():
                 self.assertContains(self.response, expected)
+
+    def test_content(self):
+        """Speaker must be in content"""
+        speaker = self.response.context['speaker']
+        self.assertIsInstance(speaker, Speaker)
+
+
+class SpeakerDetailNotFound(TestCase):
+    def test_not_found(self):
+        response = self.client.get(r('speaker_detail', slug='not-found'))
+        self.assertEqual(404, response.status_code)

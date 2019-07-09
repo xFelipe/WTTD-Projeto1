@@ -5,16 +5,12 @@
 <section>
     <div class="speakers content row padding-bottom-3 desktop-8 container">
         <h2>
-            <a href="http://hbn.link/hopper-site">Grace Hopper</a>
+            <a href="{{ speaker.website }}">{{ speaker.name }}</a>
         </h2>
-        <img class="photo" src="http://hbn.link/hopper-pic">
+        <img class="photo" src="{{ speaker.photo }}">
         <p>
-            Programadora e almirante.<br/>
-            Inventora do compilador, criadora da linguagem
-            de programação Flow-Matic serviu como base para a linguagem
-            COBOL permitindo a popularização das aplicações comerciais.
+            {{ speaker.description | linebreaks }}
         </p>
     </div>
 </section>
-
 {% endblock content %}
