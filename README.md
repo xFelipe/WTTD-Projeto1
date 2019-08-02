@@ -1,6 +1,6 @@
 # Eventex
 
-Sistema de eventos encomendado pela Morena
+Sistema de eventos encomendado pela Morena disponível em https://eventex-felipegomes.herokuapp.com/
 
 [![Build Status](https://travis-ci.org/xFelipe/WTTD-Projeto1.svg?branch=master)](https://travis-ci.org/xFelipe/WTTD-Projeto1)
 
